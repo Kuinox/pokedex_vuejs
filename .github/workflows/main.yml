@@ -34,7 +34,9 @@ jobs:
         run: npm ci
 
       - name: Build the app
-        run: npm run build
+        run: |
+          export PUBLIC_URL="https://kuinox.github.io/pokedex_vuejs"
+          npm run build
           
       - name: Setup Pages
         uses: actions/configure-pages@v2
